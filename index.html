@@ -3,92 +3,356 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PortfolioHUB</title>
+
+<title>Daniel Guedes | PortfolioHUB</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
     margin:0;
-    font-family:Arial;
-    background:#0f172a;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#020617;
     color:white;
 }
 
 header{
-    padding:20px;
-    background:#020617;
-    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(2,6,23,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-section{
-    padding:60px 20px;
-    text-align:center;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
 }
 
-h1{
+nav h1{
+    color:#38bdf8;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
     color:#38bdf8;
 }
 
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(to right,#020617,#0f172a,#111827);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h2{
+    font-size:70px;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.9;
+    opacity:0.9;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    border-radius:14px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+section{
+    padding:120px 10%;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo h2{
+    font-size:45px;
+}
+
+.linha{
+    width:120px;
+    height:5px;
+    background:#38bdf8;
+    margin:auto;
+    margin-top:15px;
+    border-radius:999px;
+}
+
+.sobre p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    font-size:18px;
+    opacity:0.9;
+}
+
 .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111827;
+    padding:35px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.card p{
+    line-height:1.8;
+    opacity:0.85;
+}
+
+.skills{
     display:flex;
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
 }
 
-.card{
-    background:#1e293b;
-    padding:20px;
-    border-radius:15px;
-    width:250px;
+.skills span{
+    padding:15px 25px;
+    background:#111827;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,0.05);
 }
+
+.contato{
+    text-align:center;
+}
+
+.contato p{
+    margin:15px 0;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#01040f;
+}
+
+@media(max-width:768px){
+
+.hero h2{
+    font-size:42px;
+}
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    gap:15px;
+}
+
+}
+
 </style>
 
 </head>
 <body>
 
 <header>
+
+<nav>
+
 <h1>PortfolioHUB</h1>
-<p>Daniel Guedes</p>
+
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+
+</nav>
+
 </header>
 
-<section>
-<h2>Sobre Mim</h2>
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>
+Daniel <span>Guedes</span>
+</h2>
 
 <p>
-Estudante de tecnologia focado em desenvolvimento
-e versionamento com Git e GitHub.
+Conhecimentos em desenvolvimento web, social media e design gráfico.
+Experiência em comunicação, vendas, resolução de problemas,
+trabalho em equipe e aprendizagem rápida.
 </p>
+
+<a href="#projetos" class="btn">Ver Projetos</a>
+
+</div>
+
 </section>
 
-<section>
+<section class="sobre" id="sobre">
+
+<div class="titulo">
+<h2>Sobre Mim</h2>
+<div class="linha"></div>
+</div>
+
+<p>
+Atualmente curso Engenharia de Software no UniCEUB e busco
+oportunidades para aplicar meus conhecimentos em tecnologia,
+design e desenvolvimento de software em empresas em crescimento.
+</p>
+
+</section>
+
+<section id="projetos">
+
+<div class="titulo">
 <h2>Projetos</h2>
+<div class="linha"></div>
+</div>
 
 <div class="cards">
 
 <div class="card">
-<h3>Sistema Jurídico</h3>
-<p>Controle de processos e protocolos.</p>
-</div>
+<h3>Design & Social Media</h3>
 
-<div class="card">
-<h3>Gestão de Riscos</h3>
-<p>Projeto acadêmico sobre arquitetura de software.</p>
+<p>
+Projetos voltados para design gráfico,
+criação de conteúdo visual e identidade digital.
+</p>
 </div>
 
 <div class="card">
 <h3>Portfolio Web</h3>
-<p>Site desenvolvido em HTML e CSS.</p>
+
+<p>
+Site responsivo desenvolvido utilizando HTML5, CSS3
+e conceitos modernos de interface.
+</p>
+</div>
+
+<div class="card">
+<h3>Gestão de Riscos</h3>
+
+<p>
+Projeto acadêmico relacionado à arquitetura de software,
+gestão e mitigação de riscos tecnológicos.
+</p>
 </div>
 
 </div>
+
 </section>
 
-<section>
+<section id="skills">
+
+<div class="titulo">
+<h2>Habilidades Técnicas</h2>
+<div class="linha"></div>
+</div>
+
+<div class="skills">
+
+<span>HTML5</span>
+<span>CSS3</span>
+<span>GitHub</span>
+<span>Photoshop</span>
+<span>Illustrator</span>
+<span>After Effects</span>
+<span>Blender</span>
+<span>ZBrush</span>
+
+</div>
+
+</section>
+
+<section class="contato" id="contato">
+
+<div class="titulo">
 <h2>Contato</h2>
+<div class="linha"></div>
+</div>
 
-<p>GitHub: github.com/seuusuario</p>
-<p>LinkedIn: linkedin.com</p>
+<p>📧 danielog1206@gmail.com</p>
+<p>📱 (61) 98282-3240</p>
+
 </section>
+
+<footer>
+
+<p>
+© 2026 - Daniel Guedes | PortfolioHUB
+</p>
+
+</footer>
 
 </body>
 </html>
