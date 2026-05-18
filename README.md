@@ -47,8 +47,7 @@ Projeto acadêmico relacionado à arquitetura de software e gestão de riscos.
 
 GitHub Pages:
 
-https://SEUUSUARIO.github.io/PortfolioHUB/
-
+https://dgwrld.github.io/PortfolioHUB/
 ---
 
 ## 📬 Contato
